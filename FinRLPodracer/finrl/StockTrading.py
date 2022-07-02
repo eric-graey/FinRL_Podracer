@@ -14,7 +14,7 @@ class StockEnvNAS89(gym.Env, ABC):
     metadata = {'render.modes': ['human']}  # gym.Env
 
     def __init__(self, cwd='./envs/finrl', gamma=0.999, turbulence_thresh=30, min_stock_rate=0.1,
-                 max_stock=1e2, initial_capital=1e6, buy_cost_pct=1e-3, sell_cost_pct=1e-3,
+                 max_stock=1e2, initial_capital=1e6, buy_cost_pct=0, sell_cost_pct=1e-3,
                  start_date='2008-03-19', end_date='2016-01-01', data_gap=4, reward_scaling=2 ** -13,
                  ticker_list=None, tech_indicator_list=None, initial_stocks=None, if_eval=False):
         cwd = '.'
